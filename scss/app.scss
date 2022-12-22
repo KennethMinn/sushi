@@ -1,0 +1,193 @@
+
+
+
+//bootstrap cusstomize
+$navbar-nav-link-padding-x: 2rem;
+$font-family-sans-serif:Poppins;
+$body-bg:hsl(19, 100%, 96%);
+$warning:hsl(19, 64%, 54%);
+// $display-font-family:"Lora", serif;
+// $headings-font-family:"Dancing Script", cursive;
+// $light:hsl(19, 8%, 55%);
+$body-color:hsl(19, 16%, 35%);
+
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 5,
+  7: $spacer * 7,
+);
+
+
+//custom css
+nav{
+    background: $body-bg;
+    opacity: 0.9;
+}
+.navbar-brand-logo {
+    height: 1.5rem;
+}
+.sushi-title{
+    height: 4.5rem;
+}
+.sushi-title-2{
+    height: 3rem;
+}
+.rotate{
+    transform:rotate(50deg);
+}
+.ww{
+    width: 75%;
+}
+.title{
+    font-family:"Lora", serif;
+    color:hsl(19, 16%, 15%);
+}
+.sub-title{
+    font-family:"Dancing Script", cursive;
+}
+.dish-card{
+    background-color: hsl(19, 100%, 97%);
+}
+.dish-card img{
+    transform: translateY(-40%);
+    transition: 1s;
+}
+.dish-card:hover img{
+    transform: translateY(-48%);
+}
+.icon{
+    font-size: 15px;
+}
+.bdr{
+    border-radius: 80px;
+}
+.outter{
+    margin-left: 250px;
+    transform: translateY(50%) rotate(52deg); 
+}
+.btn:hover i{
+    transform: translateX(35%);
+}
+.btn i{
+    transition: 1s;
+}
+#home{
+    position: relative;
+}
+#home::before{
+    content: url(../sushi/img/leaf-branch-2.png);
+    position: absolute;
+    opacity: 0.2;
+    transform: translateY(-29%) rotate(90deg) scale(0.5);
+    width: 170px;
+    z-index: -1;
+}
+#home::after{
+    content: url(../sushi/img/leaf-branch-4.png);
+    position: absolute;
+    opacity: 0.2;
+    transform: translateY(-29%) rotate(90deg) scale(0.5);
+    width: 170px;
+    bottom: 0;
+    right: 0;
+    transform: rotate(350deg) scale(0.8);
+    width: 211px;
+    z-index: -1;
+
+}
+#about{
+    position: relative;
+}
+#about::after{
+    content: url(../sushi/img/leaf-branch-1.png);
+    position: absolute;
+    opacity: 0.2;
+    transform: translateY(-29%) rotate(90deg) scale(0.5);
+    width: 170px;
+    bottom: 0;
+    right: 0;
+    transform: rotate(332deg) translateY(12%) scale(0.6);
+    width: 270px;
+    z-index: -1;
+}
+#Recently{
+    position: relative;
+}
+#Recently::after{
+    content: url(../sushi/img/leaf-branch-3.png);
+    position: absolute;
+    opacity: 0.2;
+    transform: translateY(-29%) rotate(90deg) scale(0.5);
+    width: 170px;
+    top: 40px;
+    right: 0;
+    transform: rotate(332deg) translateY(12%) scale(0.6);
+    width: 150px;
+    z-index: -1;
+}
+.ss{
+    transform: rotate(-40deg);
+}
+
+
+@media(max-width:550px){
+    .ww{
+        width: 100%;
+    }
+    .sushi-title{
+        height: 3rem;
+    }
+    .sushi-title-2{
+        height: 2.5rem;
+    }
+    .dish-card{
+        margin-bottom: 50px;
+    }
+    .dish-card img{
+        transform: translateY(-20%) ;
+    }
+    .dish-card:hover img{
+        transform: translateY(-25%);
+    }
+    .recently-img{
+        margin-top: 30px;
+    }
+    .bdr{
+        border-radius: 40px;
+    }
+    .outter{
+        display: none;
+    }
+    .bdr{
+        border-radius:0;
+    }
+}
+
+@media(max-width:1200px) {
+    .outter{
+        margin-left: 130px;
+        transform: translateY(50%) rotate(52deg); 
+    }
+}
+@media(max-width:769px) {
+    .dish-card{
+        margin-bottom: 60px;
+    }
+    .dish-card img{
+        transform: translateY(-20%) ;
+    }
+    .dish-card:hover img{
+        transform: translateY(-25%);
+    }
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Lora:wght@500;600&family=Poppins:wght@400;500&display=swap");
+@import "../node_modules/animate.css/animate.min.css";
+@import "../node_modules/remixicon/fonts/remixicon.css";
